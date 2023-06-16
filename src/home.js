@@ -263,10 +263,10 @@ const Home = () => {
                         <img src="/BANK.png" alt="" />
                       </div>
                       <div>
-                        <img src="Transfer.png" alt="" className="h-full"  />
+                        <img src="Transfer.png" alt="" className="h-full" />
                       </div>
-                       <div>
-                        <img src="USSD.png" alt="" className="h-full"  />
+                      <div>
+                        <img src="USSD.png" alt="" className="h-full" />
                       </div>
                     </Carousel>
                   </div>
@@ -499,19 +499,54 @@ const Home = () => {
             </div>
           </section>
 
+          <section className="bg-[#124072] py-9 flex flex-row-reverse px-[30px] items-center relative md:px-[80px] lg:px-[130px] ">
+            <div className="relative md:w-[50%] w-full">
+              <h2 className="text-[28px] text-[#ffffff] text-justify font-bold mb-[48px]">
+                Enjoy swift and seamless transactions with well improved POS
+                system
+              </h2>
+            </div>
+            <div className="relative md:w-[50%] w-full">
+              {" "}
+              <Carousel
+                autoPlay
+                infiniteLoop
+                showStatus={false}
+                showIndicators={false}
+              
+                verticalSwipe = "natural"
+                showThumbs={false}
+                interval={4000}
+              >
+                <div>
+                  <img src="/pos-empulse.png.png" alt="" />
+                </div>
+                <div>
+                  <img src="/pos-linux.png" alt="" />
+                </div>
+                <div>
+                  <img src="pos1.png" alt="" className="h-full" />
+                </div>
+                <div>
+                  <img src="pos2.png" alt="" className="h-full" />
+                </div>
+              </Carousel>
+            </div>
+          </section>
+
           {/* Features */}
           <section className="bg-slate-100 py-9 px-[30px] relative md:px-[80px] lg:px-[130px] ">
-            <h2 className="text-[28px] text-[#124072de] text-center font-bold mb-4">
+            <h2 className="text-[28px] text-[#124072de] text-center font-bold mb-[48px]">
               WHY YOU SHOULD USE PAYLODE
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4 ">
               <div className="shadow rounded-lg bg-slate-100 text-center py-4 px-3">
                 <img
-                  src="/heroImageremovebg.png"
+                  src="/home.png"
                   alt=""
-                  className="h-10 rounded-full mx-auto mb-3"
+                  className="h-[64px]  mx-auto mb-5"
                 />
-                <h2 className="text-[20px] text-[#124072de] font-bold">
+                <h2 className="text-[24px] text-[#124072de] font-bold">
                   Accessible Dashboard
                 </h2>
                 <p className="text-gray-500">
@@ -522,11 +557,11 @@ const Home = () => {
               </div>
               <div className="shadow rounded-lg bg-slate-100 text-center py-4 px-3">
                 <img
-                  src="/heroImageremovebg.png"
+                  src="/cashless-payment.png"
                   alt=""
-                  className="h-10 rounded-full mx-auto mb-3"
+                  className="h-[64px] mx-auto mb-5"
                 />
-                <h2 className="text-[20px] text-[#124072de] font-bold">
+                <h2 className="text-[24px] text-[#124072de] font-bold">
                   Easy Payment
                 </h2>
                 <p className="text-gray-500">
@@ -536,11 +571,11 @@ const Home = () => {
               </div>
               <div className="shadow rounded-lg bg-slate-100 text-center py-4 px-3">
                 <img
-                  src="/heroImageremovebg.png"
+                  src="/secure-payment.png"
                   alt=""
-                  className="h-10 rounded-full mx-auto mb-3"
+                  className="h-[64px] mx-auto mb-5"
                 />
-                <h2 className="text-[20px] text-[#124072de] font-bold">
+                <h2 className="text-[24px] text-[#124072de] font-bold">
                   Secured Payment
                 </h2>
                 <p className="text-gray-500">

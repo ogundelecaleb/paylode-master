@@ -13,14 +13,14 @@ const Header = () => {
 
   return (
     <div className="sticky w-full bg-gray-100 z-1000 lg:relative shadow ">
-      <div className="flex flex-row items-center  justify-between relative px-[30px] md:px-[80px] lg:px-[130px] py-[12px]">
-        <img src="/paylodelogo.png" alt="" className="lg:h-[45px] h-[38px]" />
+      <div className="flex flex-row items-center   justify-between relative px-[30px] md:px-[80px] lg:px-[130px] py-[12px]">
+        <img src="/paylodelogo.png" alt="" className="lg:h-[45px] h-[38px] mr-5" />
 
-        <nav className="hidden lg:inline-block">
-          <ul className="flex flex-row items-center text-[#124072] justify-between gap-[30px] ">
+        <nav className="hidden flex-1 lg:inline-block">
+          <ul className="flex flex-row space-x-3 items-center text-[#124072]  gap-[30px] ">
             <Link to="/">
-              <li className="cursor-pointer hover:text-[##990019] hover:border-b-[#124072]">
-                Home
+              <li className="cursor-pointer font-bold hover:text-[##990019] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+                Product
               </li>
             </Link>
 
@@ -28,18 +28,18 @@ const Header = () => {
               Process
             </li></Link> */}
             <Link to="/pricing">
-              <li className="cursor-pointer hover:text-[##990019] hover:border-b-[#124072]">
+              <li className="cursor-pointer font-bold hover:text-[##990019] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
                 Pricing
               </li>
             </Link>
 
-            <li className="cursor-pointer hover:text-[##990019] hover:border-b-[#124072]">
-              <a href="#contact">Contact Us</a>
+            <li className="cursor-pointer font-bold hover:text-[##990019] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+              <a href="#contact">Developers</a>
             </li>
           </ul>
         </nav>
-        <button className="animate-pulse py-[14px] px-[40px] bg-[#124072] text-white font-bold rounded-md hidden lg:inline-block">
-          <a href="#contact">Contact Us</a>
+        <button className=" py-[12px] px-[20px] bg-[#124072] text-white font-bold rounded-md hidden lg:inline-block">
+          <a href="#contact">Get Started</a>
         </button>
         <button onClick={handleToggle} className="lg:hidden md:inline-block">
           {toggle ? <GiHamburgerMenu /> : <AiOutlineClose />}
