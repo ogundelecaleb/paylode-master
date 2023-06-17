@@ -4,7 +4,7 @@ import {BsTelephone} from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#124072] pt-[10%] pb-5 text-[14px] px-3 md:px-[80px] lg:px-[130px]">
+    <footer className="bg-[#124072] pt-[15%] lg:pt-[10%] pb-5 text-[14px] px-3 md:px-[80px] lg:px-[130px]">
       <div className="wrapper reveal">
         <div className="flex lg:flex-row flex-col w-full gap-3">
           <div className="flex-2 text-gray-100 pr-4">

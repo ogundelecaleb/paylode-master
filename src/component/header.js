@@ -14,8 +14,13 @@ const Header = () => {
   return (
     <div className="sticky w-full bg-gray-100 z-1000 lg:relative shadow ">
       <div className="flex flex-row items-center   justify-between relative px-[30px] md:px-[80px] lg:px-[130px] py-[12px]">
-        <img src="/paylodelogo.png" alt="" className="lg:h-[45px] h-[38px] mr-5" />
-
+        <Link to="/">
+          <img
+            src="/paylodelogo.png"
+            alt=""
+            className="lg:h-[45px] h-[38px] mr-5"
+          />
+        </Link>
         <nav className="hidden flex-1 lg:inline-block">
           <ul className="flex flex-row space-x-3 items-center text-[#124072]  gap-[30px] ">
             <Link to="/">
@@ -27,7 +32,7 @@ const Header = () => {
             {/* <Link href="#product" ><li className="cursor-pointer hover:text-[##990019] hover:border-b-[#124072]">
               Process
             </li></Link> */}
-            <Link to="/pricing">
+            <Link to="/">
               <li className="cursor-pointer font-bold hover:text-[##990019] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
                 Pricing
               </li>
@@ -49,14 +54,14 @@ const Header = () => {
           <div className="bg-white absolute right-1 rounded-md shadow -bottom-[230%] lg:hidden w-[200px] py-5 px-3 z-1000">
             <ul className="flex flex-col gap-[10px] mb-2 ">
               {" "}
-              <li className="cursor-pointer border-b  hover:text-[##990019] hover:border-b-[#124072]">
-                <a href="#home">Home</a>
+              <li className="cursor-pointer border-b  hover:text-[##990019] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+                <a href="#home">Products</a>
               </li>{" "}
-              <li className="cursor-pointer hover:text-[##990019] border-b hover:border-b-[#124072]">
-                <a href="#product">Products</a>
+              <li className="cursor-pointer hover:text-[##990019] border-b  hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+                <a href="#product">Pricing</a>
               </li>{" "}
-              <li className="cursor-pointer  hover:text-[##990019] border-b hover:border-b-[#124072]">
-                <a href="#contact">Contact Us</a>
+              <li className="cursor-pointer  hover:text-[##990019] border-b  hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+                <a href="#contact">Developer</a>
               </li>
               {/* <li className="cursor-pointer border-b hover:text-[##990019] hover:border-b-[#124072]">
                 Event

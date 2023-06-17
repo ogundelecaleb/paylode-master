@@ -13,7 +13,7 @@ const Home = () => {
   //   window.location.href = `mailto:ogundelecaleb14@gmail?subject=${formData.subject}&body=Hi, My Name is ${formData.name}. ${formData.message} (${formData.email})`}
 
   const onSubmit = (formData) => {
-    window.location.href = `mailto:ogundelecaleb14@gmail?subject=${formData.subject}&body=Hi, My Name is ${formData.name}. ${formData.message} (${formData.email})`;
+    window.location.href = `mailto:sales@paylodeservices.com?subject=${formData.subject}&body=Hi, My Name is ${formData.name}. ${formData.message} (${formData.email})`;
   };
 
   return (
@@ -38,7 +38,7 @@ const Home = () => {
                 }}
                 className=" pt-5"
               >
-                <h2 className="text-[29px] lg:text-[46px] font-bold text-gray-500 tracking-wide  ">
+                <h2 className="text-[1.7rem] lg:text-[3rem] font-bold text-gray-500 tracking-wide  ">
                   ADVANCED PAYMENT GATEWAY SOLUTION FOR{" "}
                   <span className="text-[#90c841]">AFRICA</span>{" "}
                 </h2>
@@ -77,7 +77,7 @@ const Home = () => {
           </section>
           {/* partners company */}
           <section className="text-gray-400 py-7 bg-slate-50  tracking-[] text-center px-[30px] md:px-[80px] lg:px-[130px]">
-            <h4 className="text-[#124072] md:text-[20px] tracking-widest font-bold mb-10">
+            <h4 className="text-[#124072] md:text-[1.5rem] tracking-widest font-bold mb-10">
               Trusted Partners
             </h4>
 
@@ -115,7 +115,7 @@ const Home = () => {
             className="bg-slate-100 relative opacity-90 py-10 px-3 md:px-[80px] lg:px-[130px] "
           >
             <div className=" ">
-              <p className="text-[18px] md:text-[32px] text-[#90c841] font-bold mb-5 md:mb-[56px] ">
+              <p className="text-[1.5rem] md:text-[2.2rem] text-[#90c841] font-bold mb-[3rem] md:mb-[4rem] ">
                 Improved solution to solve{" "}
                 <span style={{ color: "#124072", fontWeight: "bold" }}>
                   {/* Style will be inherited from the parent element */}
@@ -131,7 +131,7 @@ const Home = () => {
                 </span>
               </p>
 
-              <div className="flex flex-col md:flex-row gap-[10%]">
+              <div className="flex flex-col md:flex-row gap-[10%] mb-[4rem]">
                 <div className="md:w-[50%] w-full flex justify-center">
                   <img
                     src="/electImage.png"
@@ -141,7 +141,7 @@ const Home = () => {
                 </div>
                 <div className="relative md:w-[50%] w-full">
                   {/* <div className="w-full absolute top-[10%] bg-[#90d62f] left-0 h-[80%] skew-y-12 -z-20"></div> */}
-                  <h2 className="text-[18px] md:text-[32px] text-[#124072] font-bold mb-2 ">
+                  <h2 className="text-[1.5rem] md:text-[2.0rem] lg:text-[2.2rem] text-[#124072] my-[2rem] md:my-[0] font-bold mb- ">
                     Enjoy a comprehensive suite of integrated bill vending
                     solution
                   </h2>
@@ -272,7 +272,7 @@ const Home = () => {
                   </div>
                 }
                 <div className="relative md:w-[50%] w-full">
-                  <h2 className="text-[18px] md:text-[32px] text-[#124072] font-bold mb-2 ">
+                  <h2 className="text-[1.5rem] md:text-[2.0rem] lg:text-[2.2rem] text-[#124072] font-bold mb-2 ">
                     User-friendly and intuitive payment system for seamless
                     transactions
                   </h2>
@@ -501,7 +501,7 @@ const Home = () => {
 
           <section className="bg-[#124072] py-9 flex flex-row-reverse px-[30px] items-center relative md:px-[80px] lg:px-[130px] ">
             <div className="relative md:w-[50%] w-full">
-              <h2 className="text-[28px] text-[#ffffff] text-justify font-bold mb-[48px]">
+              <h2 className="text-[1.5rem] md:text-[2.0rem] lg:text-[2.2rem] text-[#ffffff] text-justify font-bold mb-[48px]">
                 Enjoy swift and seamless transactions with well improved POS
                 system
               </h2>
@@ -586,11 +586,11 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section className="bg-slate-100 py-9 px-[30px] h-[80vh] relative md:px-[80px] lg:px-[130px] ">
+          <section className="bg-slate-100 py-9 px-[30px] md:h-[60vh] relative md:px-[80px] lg:px-[130px] ">
             <div className="w-full flex justify-center">
               <div
                 id="contact"
-                className="bg-[#90c841] w-[70%] absolute rounded-lg -bottom-[20%] py-9 px-[30px] md:px-[70px] lg:px-[100px]  "
+                className="bg-[#90c841] w-full md:w-[70%] md:absolute rounded-lg md:-bottom-[20%] py-9 px-[30px] md:px-[70px] lg:px-[100px]  "
               >
                 <div>
                   <h2 className="text-[28px] text-[#124072de] font-bold mb-4 text-center">
