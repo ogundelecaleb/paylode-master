@@ -1,10 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+.bg-image{
+  background-image: url("/public/grayscale-background.jpg");
+  /* height: 400px;
+  object-fit: cover;
+  background: no-repeat; */
+}
 
 .contactInput {
   @apply outline-none bg-slate-100 rounded-md border-b px-6 py-4 border-[#242424] text-gray-500 transition-all placeholder-gray-500 focus:border-[#39ff14]/40 focus:text-gray-600 hover:border-[#39ff14]/40;
 }
+
 
 
 body{
@@ -17,6 +26,9 @@ body{
   overflow-x: hidden;
 }
 
+.style-font {
+  font-family: 'Caprasimo', cursive;
+}
 
 
 .track {

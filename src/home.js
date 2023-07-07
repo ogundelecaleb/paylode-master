@@ -71,7 +71,7 @@ const Home = () => {
               <img
                 src="/seamlesss.png"
                 alt=""
-                className="h-[360px] lg:h-[420px] lg:w-[580px] "
+                className="h-[360px] lg:h-[420px] lg:w-[580px] object-contain "
               />
             </div>
           </section>
@@ -83,11 +83,11 @@ const Home = () => {
 
             <div className="marquee">
               <div className="flex flex-row  justify-center gap-5 track">
-                <img
+                {/* <img
                   src="/palmpay-logo.png"
                   alt="palmpay logo"
                   className="h-10"
-                />
+                /> */}
                 <img
                   src="/macroel-logo.png"
                   alt="macroel logo"
@@ -257,10 +257,10 @@ const Home = () => {
                       interval={5000}
                     >
                       <div>
-                        <img src="/CARD.png" alt="" />
+                        <img src="/CARD.png" alt="" className="h-full" />
                       </div>
                       <div>
-                        <img src="/BANK.png" alt="" />
+                        <img src="/BANK.png" alt="" className="h-full" />
                       </div>
                       <div>
                         <img src="Transfer.png" alt="" className="h-full" />
@@ -498,8 +498,29 @@ const Home = () => {
               </div>
             </div>
           </section>
-
-          <section className="bg-[#124072] py-9 flex flex-row-reverse px-[30px] items-center relative md:px-[80px] lg:px-[130px] ">
+          <section
+            id="business"
+            className="bg-slate-100 relative opacity-90 py-[60px] md:py-[80px] px-3 md:px-[80px] lg:px-[130px] "
+          >
+            <div className="flex flex-col relative md:flex-row gap-[10%] items-center">
+              <div className="relative md:w-[50%] w-full">
+                <iframe
+                  title="animation"
+                  src="https://embed.lottiefiles.com/animation/147316"
+                  className="h-[50vh]  w-full"
+                ></iframe>
+              </div>
+              <div className="relative md:w-[50%] w-full">
+                <h2 className="text-[1.2rem] lg:text-[1.8rem]  text-gray-500 tracking-wide style-font ">
+                  We know you want to create the best payment experience for
+                  your customers, and we're working hard to make sure that
+                  happens. Our seamless payment ordering system is set up to grow
+                  your business and provide a great user experience.
+                </h2>
+              </div>
+            </div>
+          </section>
+          <section className="bg-[#124072] gap-6 py-9 flex flex-row-reverse px-[30px] items-center relative md:px-[80px] lg:px-[130px] ">
             <div className="relative md:w-[50%] w-full">
               <h2 className="text-[1.5rem] md:text-[2.0rem] lg:text-[2.2rem] text-[#ffffff] text-justify font-bold mb-[48px]">
                 Enjoy swift and seamless transactions with well improved POS
@@ -513,13 +534,12 @@ const Home = () => {
                 infiniteLoop
                 showStatus={false}
                 showIndicators={false}
-              
-                verticalSwipe = "natural"
+                verticalSwipe="natural"
                 showThumbs={false}
                 interval={4000}
               >
                 <div>
-                  <img src="/pos-empulse.png.png" alt="" />
+                  <img src="/pos-empulse.png" alt="" />
                 </div>
                 <div>
                   <img src="/pos-linux.png" alt="" />
@@ -537,7 +557,7 @@ const Home = () => {
           {/* Features */}
           <section className="bg-slate-100 py-9 px-[30px] relative md:px-[80px] lg:px-[130px] ">
             <h2 className="text-[28px] text-[#124072de] text-center font-bold mb-[48px]">
-              WHY YOU SHOULD USE PAYLODE
+              WHY PAYLODE?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4 ">
               <div className="shadow rounded-lg bg-slate-100 text-center py-4 px-3">
@@ -590,7 +610,7 @@ const Home = () => {
             <div className="w-full flex justify-center">
               <div
                 id="contact"
-                className="bg-[#90c841] w-full md:w-[70%] md:absolute rounded-lg md:-bottom-[20%] py-9 px-[30px] md:px-[70px] lg:px-[100px]  "
+                className="bg-[#90c841] w-full md:w-[70%] md:absolute rounded-lg md:-bottom-[20%] py-9 px-[15px] md:px-[70px] lg:px-[100px]  "
               >
                 <div>
                   <h2 className="text-[28px] text-[#124072de] font-bold mb-4 text-center">
