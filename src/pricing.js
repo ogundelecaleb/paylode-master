@@ -43,10 +43,10 @@ const Pricing = () => {
     <div>
       <Header />
 
-      <section className="relative -z-10 bg-gray-200/80">
-        <div className="w-full absolute top-[10%] bg-[#124072]/90 left-0 h-[400px] skew-y-12 -z-20"></div>
+      <section className="relative -z-10 bg-[#124072]/90">
+        {/* <div className="w-full absolute top-[10%] bg-[#124072]/90 left-0 h-[400px] skew-y-5 -z-20"></div> */}
         <div
-            className="gap-y-8 py-[48px]  px-[30px] md:px-[80px] lg:px-[130px]  items-center gap-5 w-full "
+            className="gap-y-8 py-[48px]  px-[30px] md:px-[50px] lg:px-[60px]  items-center gap-5 w-full "
             >
 
           <h2 className="text-[1.7rem] lg:text-[2.5rem] font-extrabold text-center text-gray-800 tracking-wide">
@@ -251,7 +251,7 @@ const Pricing = () => {
           </div>
         </div>
       </section>
-      <section className=" py-[48px] px-[30px]   relative md:px-[80px] lg:px-[130px]">
+      <section className=" py-[48px]  relative px-[30px] md:px-[50px] lg:px-[60px]">
         <h2 className="text-[1.7rem] lg:text-[2.5rem] font-extrabold text-center text-gray-600 tracking-wide mb-3">
           Frequently Asked Questions
         </h2>

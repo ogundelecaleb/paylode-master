@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&display=swap");
 
-.bg-image{
+.bg-image {
   background-image: url("/public/grayscale-background.jpg");
   /* height: 400px;
   object-fit: cover;
@@ -11,13 +11,11 @@
 }
 
 .contactInput {
-  @apply outline-none bg-slate-100 rounded-md border-b px-6 py-4 border-[#242424] text-gray-500 transition-all placeholder-gray-500 focus:border-[#39ff14]/40 focus:text-gray-600 hover:border-[#39ff14]/40;
+  @apply outline-none bg-slate-100 rounded-md border-b px-6 py-4 border-[#242424] text-gray-500 transition-all placeholder-gray-500 focus:border-[#124072]/40 focus:text-gray-600 hover:border-[#124072]/40;
 }
 
-
-
-body{
-  font-family: 'Be Vietnam Pro', sans-serif;
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 .marquee {
   position: relative;
@@ -27,26 +25,50 @@ body{
 }
 
 .style-font {
-  font-family: 'Caprasimo', cursive;
+  font-family: "Caprasimo", cursive;
 }
 
-
 .track {
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 15s linear infinite;
-    width: 180%;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 15s linear infinite;
+  width: 180%;
+}
+.track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
   }
-  .track:hover {
-    animation-play-state: paused;
+  to {
+    transform: translateX(-50%);
   }
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  
+}
+
+code .language-markup {
+  background: none;
+  color: white;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  hyphens: none;
+  line-height: 1.5;
+  tab-size: 4;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  overflow-wrap: normal;
+}
+
+.space1{
+  margin-left: 15px;
+}
+
+.space2{
+  margin-left: 30px;
+}
+
+.space{
+  margin-left: 10px;
+}

@@ -1,19 +1,47 @@
-import React from "react";
+import React, { useRef } from "react";
 import Footer from "./component/footer";
 import Header from "./component/header";
+import ContactUs from "./component/contact";
 import { motion as m } from "framer-motion";
-import { useForm } from "react-hook-form";
+import {AiOutlineArrowRight} from "react-icons/ai"
 import { Typewriter } from "react-simple-typewriter";
 import { Carousel } from "react-responsive-carousel";
+import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
+
 const Home = () => {
   // const { register, handleSubmit } = useForm<Inputs>();
-  const { register, handleSubmit } = useForm();
+  // const { register, handleSubmit } = useForm();
 
   // const onSubmit: SubmitHandler<Inputs> = (formData) => {
   //   window.location.href = `mailto:ogundelecaleb14@gmail?subject=${formData.subject}&body=Hi, My Name is ${formData.name}. ${formData.message} (${formData.email})`}
 
-  const onSubmit = (formData) => {
-    window.location.href = `mailto:sales@paylodeservices.com?subject=${formData.subject}&body=Hi, My Name is ${formData.name}. ${formData.message} (${formData.email})`;
+  // const onSubmit = (formData) => {
+  //   window.location.href = `mailto:sales@paylodeservices.com?subject=${formData.subject}&body=Hi, My Name is ${formData.name}. ${formData.message} (${formData.email})`;
+  // };
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_11whge8",
+        "template_zdl0h2h",
+        form.current,
+        "_4uaal6BIvDKfqqqT"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
   };
 
   return (
@@ -23,7 +51,7 @@ const Home = () => {
         <div>
           <section
             id="#"
-            className="gap-y-8 py-[48px] bg-slate-100 px-[30px] md:px-[80px] lg:px-[130px] flex flex-col md:flex-row items-center gap-5 w-full "
+            className="gap-y-8 py-[60px] bg-slate-100 px-[16px] md:px-[50px] lg:px-[60px] flex flex-col md:flex-row items-center gap-5 w-full "
           >
             <div>
               <m.div
@@ -39,7 +67,7 @@ const Home = () => {
                 className=" pt-5"
               >
                 <h2 className="text-[1.7rem] lg:text-[3rem] font-bold text-gray-500 tracking-wide  ">
-                  ADVANCED PAYMENT GATEWAY SOLUTION FOR{" "}
+                  ADVANCED PAYMENT GATEWAY FOR{" "}
                   <span className="text-[#90c841]">AFRICA</span>{" "}
                 </h2>
 
@@ -58,10 +86,15 @@ const Home = () => {
                   }}
                   className=" mt-4 flex items-center space-x-3"
                 >
-                  <button className="px-3 py-2 bg-[#124072] hover:bg-[#175392] font-bold rounded-lg text-gray-200">
-                    <a href="#contact">Get Started</a>
+                  <button className="px-4 py-2 bg-[#124072] hover:bg-[#175392]  rounded-lg text-gray-200">
+                    <a
+                      href="https://pgmerchants.paylodeservices.com/requestOtp"
+                      target="_blank"
+                    >
+                      Create an account
+                    </a>
                   </button>
-                  <button className="px-3 py-2 font-bold bg-[#124072] hover:bg-[#175392] rounded-lg text-gray-200">
+                  <button className="px-3 py-2  bg-[#124072] hover:bg-[#175392] rounded-lg text-gray-200">
                     <a href="#contact">Contact Us</a>
                   </button>
                 </m.div>
@@ -76,7 +109,7 @@ const Home = () => {
             </div>
           </section>
           {/* partners company */}
-          <section className="text-gray-400 py-7 bg-slate-50  tracking-[] text-center px-[30px] md:px-[80px] lg:px-[130px]">
+          <section className="text-gray-400 py-7 bg-slate-50  tracking-[] text-center px-[16px] md:px-[50px] lg:px-[60px]">
             <h4 className="text-[#124072] md:text-[1.5rem] tracking-widest font-bold mb-10">
               Trusted Partners
             </h4>
@@ -88,11 +121,7 @@ const Home = () => {
                   alt="palmpay logo"
                   className="h-10"
                 /> */}
-                <img
-                  src="/macroel-logo.png"
-                  alt="macroel logo"
-                  className="h-10"
-                />
+                <img src="/baxi.png" alt="baxi logo" className="h-10" />
                 <img
                   src="/cloud-interactive-logo.png"
                   alt="cloud interactive logo"
@@ -112,10 +141,10 @@ const Home = () => {
 
           <section
             id="product"
-            className="bg-slate-100 relative opacity-90 py-10 px-3 md:px-[80px] lg:px-[130px] "
+            className="bg-slate-100 relative opacity-90 py-10 px-[16px] md:px-[50px] lg:px-[60px] "
           >
             <div className=" ">
-              <p className="text-[1.5rem] md:text-[2.2rem] text-[#90c841] font-bold mb-[3rem] md:mb-[4rem] ">
+              <p className="text-[1.5rem] md:text-[2.2rem] h-[20px] text-[#90c841] font-bold mb-[6+rem] md:mb-[6rem] ">
                 Improved solution to solve{" "}
                 <span style={{ color: "#124072", fontWeight: "bold" }}>
                   {/* Style will be inherited from the parent element */}
@@ -131,7 +160,7 @@ const Home = () => {
                 </span>
               </p>
 
-              <div className="flex flex-col md:flex-row gap-[10%] mb-[4rem]">
+              <div className="flex flex-col md:flex-row gap-[10%] mb-[4rem] md:mb-[160px]">
                 <div className="md:w-[50%] w-full flex justify-center">
                   <img
                     src="/electImage.png"
@@ -149,14 +178,14 @@ const Home = () => {
                   <p className="text-[16px] lg:text-[20px] text-[#124072] text-justify mb-8 px-1">
                     Our platform is designed to make bill payments a breeze, so
                     you can spend less time worrying about bills and more time
-                    enjoying life. Plus, with our secure and reliable payment
-                    system, you can rest assured that your transactions are
-                    always safe and secure.
+                    enjoying life. In addition, with our secure and reliable
+                    payment system, you can rest assured that your transactions
+                    are always safe and secure.
                   </p>
                   {/* </div> */}
-                  <h3 className="text-[20px] lg:text-[24px] text-[#124072] font-bold mb-2 ">
+                  {/* <h3 className="text-[20px] lg:text-[24px] text-[#124072] font-bold mb-2 ">
                     Features
-                  </h3>
+                  </h3> */}
                   <ul>
                     <li className="text-[16px] lg:text-[20px] mb-2 flex items-center tracking-widest text-[#124072] ">
                       <svg
@@ -278,24 +307,19 @@ const Home = () => {
                   </h2>
 
                   <p className="text-[16px] lg:text-[20px] text-[#124072] text-justify mb-8 px-1">
-                    With our secure and reliable payment processing system, you
-                    can accept payments and receive funds seamlessly from
-                    anyone, anywhere in the world. Whether you're running a
-                    small business or a large enterprise, our payment platform
-                    is designed to meet your needs and help you grow your
-                    business.
-                    <br />
-                    <br />
-                    We are a marketplace that connects merchants with payment
-                    providers to allow consumers to pay wherever and whenever
-                    they want. We don't just enable payments, we build solutions
-                    that help merchants thrive.
+                    With our secure and reliable payment gateway, you can accept
+                    payments and receive funds quickly and easily from anyone,
+                    anywhere in the world. Whether you're running a small
+                    business or a large enterprise, our gateway is designed to
+                    meet your needs and help your business to grow grow. We
+                    connect merchants with the solutions that allows their
+                    customers to pay wherever and whenever they want.
                   </p>
 
                   {/* </div> */}
-                  <h3 className="text-[20px] lg:text-[24px] text-[#124072] font-bold mb-2 ">
+                  {/* <h3 className="text-[20px] lg:text-[24px] text-[#124072] font-bold mb-2 ">
                     Features
-                  </h3>
+                  </h3> */}
                   <ul>
                     <li className="text-[16px] lg:text-[20px] mb-2 flex items-center tracking-widest text-[#124072] ">
                       <svg
@@ -498,11 +522,12 @@ const Home = () => {
               </div>
             </div>
           </section>
+
           <section
             id="business"
-            className="bg-slate-100 relative opacity-90 py-[60px] md:py-[80px] px-3 md:px-[80px] lg:px-[130px] "
+            className="bg-slate-100 relative opacity-90 py-[60px] md:py-[80px] px-[16px] md:px-[50px] lg:px-[60px] "
           >
-            <div className="flex flex-col relative md:flex-row gap-[10%] items-center">
+            <div className="flex flex-col relative md:flex-row gap-[36px] md:gap-[10%] items-center">
               <div className="relative md:w-[50%] w-full">
                 <iframe
                   title="animation"
@@ -510,24 +535,27 @@ const Home = () => {
                   className="h-[50vh]  w-full"
                 ></iframe>
               </div>
-              <div className="relative md:w-[50%] w-full">
+              <div className="relative md:w-[60%] w-full ">
                 <h2 className="text-[1.2rem] lg:text-[1.8rem]  text-gray-500 tracking-wide style-font ">
-                  We know you want to create the best payment experience for
+                  We want to join you to create the best payment experience for
                   your customers, and we're working hard to make sure that
-                  happens. Our seamless payment ordering system is set up to grow
-                  your business and provide a great user experience.
+                  happens. Our payment gateway is designed to help you
+                  grow your business and provide a great user experience.
                 </h2>
               </div>
             </div>
           </section>
-          <section className="bg-[#124072] gap-6 py-9 flex flex-row-reverse px-[30px] items-center relative md:px-[80px] lg:px-[130px] ">
-            <div className="relative md:w-[50%] w-full">
-              <h2 className="text-[1.5rem] md:text-[2.0rem] lg:text-[2.2rem] text-[#ffffff] text-justify font-bold mb-[48px]">
-                Enjoy swift and seamless transactions with well improved POS
-                system
+          <section className="bg-[#124072] gap-6 py-9   items-center relative px-[16px] md:px-[50px] lg:px-[60px] ">
+            <div className="relative w-[85%]  md:w-[70%]">
+              <h2 className="text-[1.5rem] md:text-[2.0rem] lg:text-[2.2rem] text-[#ffffff]  font-bold mb-[48px]">
+                Enjoy swift and Seamless transaction processing with well
+                improved POS system
               </h2>
+              <Link  to="/product" className="text-[#124072] ">
+                <button className="text-white flex items-center gap-3">Learn More <AiOutlineArrowRight/></button>
+              </Link>
             </div>
-            <div className="relative md:w-[50%] w-full">
+            {/* <div className="relative md:w-[50%] w-full">
               {" "}
               <Carousel
                 autoPlay
@@ -551,11 +579,11 @@ const Home = () => {
                   <img src="pos2.png" alt="" className="h-full" />
                 </div>
               </Carousel>
-            </div>
+            </div> */}
           </section>
 
           {/* Features */}
-          <section className="bg-slate-100 py-9 px-[30px] relative md:px-[80px] lg:px-[130px] ">
+          <section className="bg-slate-100 py-[52px] relative px-[16px] md:px-[50px] lg:px-[60px]">
             <h2 className="text-[28px] text-[#124072de] text-center font-bold mb-[48px]">
               WHY PAYLODE?
             </h2>
@@ -570,7 +598,7 @@ const Home = () => {
                   Accessible Dashboard
                 </h2>
                 <p className="text-gray-500">
-                  Paylode makes transaction easy by creating a user-friendly
+                  Paylode services makes transaction easy by creating a user-friendly
                   transaction dashboard for every day business track and to
                   optimize user data
                 </p>
@@ -606,7 +634,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section className="bg-slate-100 py-9 px-[30px] md:h-[60vh] relative md:px-[80px] lg:px-[130px] ">
+          <section className="md:bg-slate-100 bg-[#90c841] py-9 px-[10px] md:px-[50px] lg:px-[60px] md:h-[60vh] relative">
             <div className="w-full flex justify-center">
               <div
                 id="contact"
@@ -616,42 +644,48 @@ const Home = () => {
                   <h2 className="text-[28px] text-[#124072de] font-bold mb-4 text-center">
                     SEND A MAIL
                   </h2>
+
                   <form
-                    onSubmit={handleSubmit(onSubmit)}
+                    ref={form}
+                    onSubmit={sendEmail}
+                    // onSubmit={handleSubmit(onSubmit)}
                     action=""
                     className="flex flex-col space-y-2  "
                   >
                     <div className="flex gap-2   flex-col md:flex-row md:space-x-2 md:justify-between">
                       <input
-                        {...register("name")}
-                        placeholder="Name"
+                        // {...register("name")}
                         type="text"
+                        name="user_name"
+                        placeholder="Name"
                         className="contactInput w-full"
                         required
                       />
                       <input
-                        {...register("email")}
+                        // {...register("email")}
                         placeholder="Email"
                         type="email"
+                        name="user_email"
                         className="contactInput w-full"
                         required
                       />
                     </div>
-                    <input
+                    {/* <input
                       {...register("subject")}
                       placeholder="Subject"
                       type="text"
                       className="contactInput"
                       required
-                    />
+                    /> */}
                     <textarea
-                      {...register("message")}
+                      // {...register("message")}
                       placeholder="Message"
+                      name="message"
                       className="contactInput"
                     ></textarea>
                     <button
                       type="submit"
-                      className="bg-[#124072] md:w-[60%] self-center py-5 px-10 md:px-4 rounded-md text-gray-50 font-bold text-lg"
+                      className="bg-[#124072] md:w-[60%] self-center py-2 md:py-5 md:px-10  px-4 rounded-md text-gray-50 text-md"
                     >
                       Submit
                     </button>
@@ -660,10 +694,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          {/* FAQs */}
-          <section></section>
 
-          {/* contact us */}
         </div>
       </div>
       <Footer />
